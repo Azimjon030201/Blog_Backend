@@ -1,8 +1,12 @@
 require('dotenv').config();
 const express = require('express');
+const cors = require('cors');
+const blogRoute = require('./routes/blog.route');
 
 const app = express();
 app.use(express.json());
+app.use(cors({origin: process.env.FRONTEND_URL}))
+app.use('/blogs', blogRoute);
 
 const PORT = process.env.PORT || 3000;
 

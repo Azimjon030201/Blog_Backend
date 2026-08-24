@@ -1,19 +1,28 @@
 const path = require('path');
-const fs = require('fs');
-const PathToFile = path.join(__dirname, "data.json")
+const fs = require('fs').promises;
 
-function WriteData(data){
-    fs.appendFile(PathToFile,data, ()=>{
-        console.log("Data added");
-    })
+const PathToFile = path.join(__dirname, 'data.json');
+
+async function AppendData(data) {
+    await fs.appendFile(PathToFile, data, 'utf8');
 }
 
- function ReadData() {
-    const data =  fs.readFile(PathToFile, "utf8")
+async function WriteData(data) {
+    await fs.writeFile(
+        PathToFile,
+        JSON.stringify(data, null, 2),
+        'utf8'
+    );
+}
+
+async function ReadData() {
+    const data = await fs.readFile(PathToFile, 'utf8');
+
     return JSON.parse(data);
 }
 
 module.exports = {
     WriteData,
-    ReadData
-}
+    ReadData,
+    AppendData
+};
