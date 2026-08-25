@@ -5,6 +5,6 @@ router.get('/all', controller.getAll)
 router.get('/:id', controller.getById)
 router.post('/create', controller.create)
 router.put('/update/:id', controller.update)
-router.delete('/delete/:id', controller.remove)
+router.delete('/remove/:id', controller.remove)
 
 module.exports = router

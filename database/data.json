@@ -1,1 +1,14 @@
-[{"id":1,"title":"Ob-havo ma'lumotlari","text":"Bugun Toshkent shahrida havo harorati ...","author":"Azimjon Abdug'afforov"},{"id":2,"title":"Xorij xabarlari","text":"Janubiy Afrikaning Keyptown shahrida ...","author":"Abdurauf Namozov"},{"id":"cc1ec40f-788a-4140-9fe1-f4b11f40c6fb","title":"Test uchun3","text":"Teest qilib ko'rdik","author":"Azimjon"}]
+[
+  {
+    "id": 1,
+    "title": "Ob-havo ma'lumotlari",
+    "text": "Bugun Toshkent shahrida havo harorati ...",
+    "author": "Azimjon Abdug'afforov"
+  },
+  {
+    "id": "cc1ec40f-788a-4140-9fe1-f4b11f40c6fb",
+    "title": "Test uchun3",
+    "text": "Teest qilib ko'rdik",
+    "author": "Azimjon"
+  }
+]
